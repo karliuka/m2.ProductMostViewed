@@ -87,14 +87,17 @@ class ProductList extends AbstractProduct implements IdentityInterface
     }
 
     /**
-     * @return $this
+     * Prepare items data
+     * 
+     * @return \Faonni\ProductMostViewed\Block\ProductList
      */
     protected function _prepareData()
     {
         $this->_itemCollection = $this->_productsFactory->create()
 			->addAttributeToSelect('*')
+			->setProductAttributeSetId(14)
 			->addViewsCount()
-			->addStoreFilter();
+			->addStoreFilter(1);
 
         if ($this->moduleManager->isEnabled('Magento_Checkout')) {
             $this->_addProductAttributesAndPrices($this->_itemCollection);
@@ -102,6 +105,8 @@ class ProductList extends AbstractProduct implements IdentityInterface
         
         $this->_itemCollection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());
         $this->_itemCollection->load();
+        
+        //echo $this->_itemCollection->getSelect();
 
         foreach ($this->_itemCollection as $product) {
             $product->setDoNotUseCategoryId(true);
@@ -111,7 +116,10 @@ class ProductList extends AbstractProduct implements IdentityInterface
     }
 
     /**
-     * @return $this
+     * Before rendering html process
+     * Prepare items collection
+     *
+     * @return \Faonni\ProductMostViewed\Block\ProductList
      */
     protected function _beforeToHtml()
     {
@@ -120,7 +128,9 @@ class ProductList extends AbstractProduct implements IdentityInterface
     }
 
     /**
-     * @return Collection
+     * Retrieve items collection
+     *
+     * @return \Magento\Catalog\Model\ResourceModel\Product\Collection
      */
     public function getItems()
     {
