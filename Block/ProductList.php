@@ -19,7 +19,7 @@
  * @copyright   Copyright (c) 2016 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-namespace Faonni\ProductMostViewed\Block\ProductList;
+namespace Faonni\ProductMostViewed\Block;
 
 use Magento\Catalog\Block\Product\AbstractProduct;
 use Magento\Catalog\Block\Product\Context;
