@@ -30,10 +30,20 @@
                     <argument name="type" xsi:type="string">related</argument>
                 </arguments>
                 <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="related.product.addto" as="addto">
-                    <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare"
-                           name="related.product.addto.compare" as="compare"
-                           template="Magento_Catalog::product/list/addto/compare.phtml"/>
+                    <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare" name="related.product.addto.compare" as="compare" template="Magento_Catalog::product/list/addto/compare.phtml"/>
                 </block>
+				<action method="setCategoriesFilter">
+					<argument name="categories_filter" xsi:type="array">
+						<item name="eq" xsi:type="array">
+							<item name="category_id_4" xsi:type="string">4</item>
+							<item name="category_id_5" xsi:type="string">5</item>
+							<item name="category_id_6" xsi:type="string">6</item>
+						</item>					
+					</argument>
+				</action> 
+				<action method="setNumProducts">
+					<argument name="num_products" xsi:type="string">5</argument>
+				</action> 				              
             </block>				
         </referenceBlock>
     </body>
