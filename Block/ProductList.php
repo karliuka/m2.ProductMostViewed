@@ -59,7 +59,7 @@ class ProductList extends AbstractProduct implements IdentityInterface
     /**
      * Reports product collection factory
      * 
-     * @var \Magento\Reports\Model\ResourceModel\Product\CollectionFactory
+     * @var \Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product\CollectionFactory
      */
     protected $_productsFactory;    
 
@@ -67,7 +67,7 @@ class ProductList extends AbstractProduct implements IdentityInterface
      * @param \Magento\Catalog\Block\Product\Context $context
      * @param \Magento\Catalog\Model\Product\Visibility $catalogProductVisibility
      * @param \Magento\Framework\Module\Manager $moduleManager
-     * @param \Magento\Reports\Model\ResourceModel\Product\CollectionFactory $productsFactory
+     * @param \Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product\CollectionFactory $productsFactory
      * @param array $data
      */
     public function __construct(
