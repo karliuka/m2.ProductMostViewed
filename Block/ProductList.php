@@ -26,7 +26,7 @@ use Magento\Catalog\Block\Product\Context;
 use Magento\Catalog\Model\Product\Visibility;
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Module\Manager;
-use Magento\Reports\Model\ResourceModel\Product\CollectionFactory;
+use Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product\CollectionFactory;
 
 /**
  * Catalog product most viewed items block
@@ -95,18 +95,21 @@ class ProductList extends AbstractProduct implements IdentityInterface
     {
         $this->_itemCollection = $this->_productsFactory->create()
 			->addAttributeToSelect('*')
-			->setProductAttributeSetId(14)
 			->addViewsCount()
-			->addStoreFilter(1);
+			->addStoreFilter();
 
         if ($this->moduleManager->isEnabled('Magento_Checkout')) {
             $this->_addProductAttributesAndPrices($this->_itemCollection);
         }
         
         $this->_itemCollection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());
+        
+		$numProducts = $this->getNumProducts() ? $this->getNumProducts() : 6;
+		$this->_itemCollection->setPage(1, $numProducts); 
+		       
         $this->_itemCollection->load();
         
-        //echo $this->_itemCollection->getSelect();
+        echo $this->_itemCollection->getSelect();
 
         foreach ($this->_itemCollection as $product) {
             $product->setDoNotUseCategoryId(true);
