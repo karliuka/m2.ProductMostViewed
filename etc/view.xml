@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Faonni
+ *  
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade module to newer
+ * versions in the future.
+ * 
+ * @package     Faonni_ProductMostViewed
+ * @copyright   Copyright (c) 2016 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Config/etc/view.xsd">
+    <media>
+        <images module="Magento_Catalog">
+            <image id="most_viewed_products_list" type="small_image">
+                <width>140</width>
+                <height>140</height>
+            </image>
+        </images>
+    </media>    
+    <vars module="Magento_Catalog">
+        <var name="most_viewed_products_list:type">small_image</var>
+        <var name="most_viewed_products_list:width">140</var>
+        <var name="most_viewed_products_list:ratio">1</var>
+        <var name="most_viewed_products_list:height">140</var>
+    </vars>
+</view>

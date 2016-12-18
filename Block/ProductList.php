@@ -154,19 +154,4 @@ class ProductList extends AbstractProduct implements IdentityInterface
         }
         return $identities;
     }
-
-    /**
-     * Find out if some products can be easy added to cart
-     *
-     * @return bool
-     */
-    public function canItemsAddToCart()
-    {
-        foreach ($this->getItems() as $item) {
-            if (!$item->isComposite() && $item->isSaleable() && !$item->getRequiredOptions()) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
