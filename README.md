@@ -4,7 +4,7 @@ Extension displays the top most viewed products for your stores.
 ### Home page
 <img alt="Magento2 ProductMostViewed" src="https://karliuka.github.io/m2/product-most-viewed/home.png" style="width:100%"/>
 ### Category page
-<img alt="Magento2 ProductMostOrdered" src="https://karliuka.github.io/m2/product-most-ordered/category.png" style="width:100%"/>
+<img alt="Magento2 ProductMostOrdered" src="https://karliuka.github.io/m2/product-most-viewed/category.png" style="width:100%"/>
 ## Install with Composer as you go
 
 1. Go to Magento2 root folder
