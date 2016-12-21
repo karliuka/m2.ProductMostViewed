@@ -28,6 +28,7 @@ A shortcode to Homepage and to other CMS pages or CMS blocks.
 {{block class='Faonni\ProductMostViewed\Block\ProductList' 
 		template='Faonni_ProductMostViewed::product/list/items.phtml' 
 		title='Most Viewed Products' 
+		interval='45'
 		num_products='6'
 }}
     ```
@@ -39,6 +40,10 @@ A Layout Update XML to all categories.
 	</action>
 	<action method="setNumProducts">
 		<argument name="num_products" xsi:type="string">6</argument>
+	</action>
+	<!-- last 45 days, if 0 - all lifetime -->
+	<action method="setInterval">
+		<argument name="interval" xsi:type="string">45</argument>
 	</action>	
 </referenceBlock>
     ```

@@ -104,9 +104,10 @@ class ProductList extends AbstractProduct implements IdentityInterface
      */
     protected function _prepareData()
     {
-        $this->_itemCollection = $this->_productsFactory->create()
+        list($from, $to) = $this->getFromTo();
+		$this->_itemCollection = $this->_productsFactory->create()
 			->addAttributeToSelect('*')
-			->addViewsCount()
+			->addViewsCount($from, $to)
 			->addStoreFilter();
 
         if ($this->moduleManager->isEnabled('Magento_Checkout')) {
@@ -181,4 +182,28 @@ class ProductList extends AbstractProduct implements IdentityInterface
         }
         return $identities;
     }
+	
+    /**
+     * Return from to interval
+     *
+     * @return array
+     */
+    public function getFromTo()
+    {
+		$from = '';
+		$to = '';		
+		$interval = (int)$this->getInterval();
+		
+		if ($interval > 0) {
+			$period = $this->getPeriod();
+			$dtTo = new \DateTime();
+			$dtFrom = clone $dtTo;
+			// last $interval day(s)
+			$dtFrom->modify("-{$interval} day");
+
+			$from = $dtFrom->format('Y-m-d');
+			$to = $dtTo->format('Y-m-d');
+		}		
+		return [$from, $to];
+    }	
 }

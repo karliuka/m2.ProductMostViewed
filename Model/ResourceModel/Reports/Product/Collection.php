@@ -37,7 +37,7 @@ class Collection extends ProductCollection
      * @param string $to
      * @return $this
      */
-    public function addViewsCount($from = '', $to = '')
+    public function addViewsCount($from='', $to='')
     {
         /**
          * Getting event type id for catalog_product_view event
