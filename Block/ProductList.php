@@ -115,7 +115,7 @@ class ProductList extends AbstractProduct implements IdentityInterface
         }
         
         $this->_itemCollection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());       
-		$numProducts = $this->getNumProducts() ? $this->getNumProducts() : 4;
+		$numProducts = $this->getNumProducts() ? $this->getNumProducts() : 6;
 		
 		if ($this->getCurrentCategory()) {
 			$this->_itemCollection->addCategoryFilter($this->getCurrentCategory());
