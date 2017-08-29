@@ -23,6 +23,7 @@ Extension displays the top most viewed products for your stores.
 	php bin/magento setup:static-content:deploy
     ```
 ## Display and configuration
+
 A shortcode to Homepage and to other CMS pages or CMS blocks.
     ```bash
 {{block class='Faonni\ProductMostViewed\Block\ProductList' 
