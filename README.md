@@ -3,8 +3,10 @@ Extension displays the top most viewed products for your stores.
 
 ## Home page
 <img alt="Magento2 ProductMostViewed" src="https://karliuka.github.io/m2/product-most-viewed/home.png" style="width:100%"/>
+
 ## Category page
 <img alt="Magento2 ProductMostViewed" src="https://karliuka.github.io/m2/product-most-viewed/category.png" style="width:100%"/>
+
 ## Install with Composer as you go
 
 1. Go to Magento2 root folder
@@ -27,15 +29,13 @@ Extension displays the top most viewed products for your stores.
 
 A shortcode to Homepage and to other CMS pages or CMS blocks.
 
-    ```bash
-	
+    ```bash	
 	{{block class='Faonni\ProductMostViewed\Block\ProductList' 
 		template='Faonni_ProductMostViewed::product/list/items.phtml' 
 		title='Most Viewed Products' 
 		interval='45'
 		num_products='6'
 	}}
-	
     ```
     
 A Layout Update XML to all categories.
