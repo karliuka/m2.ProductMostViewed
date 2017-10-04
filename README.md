@@ -27,7 +27,7 @@ Extension displays the top most viewed products for your stores.
           
 ## Display and configuration
 
-A shortcode to Homepage and to other CMS pages or CMS blocks.
+1. A shortcode to Homepage and to other CMS pages or CMS blocks.
 
     ```bash	
 	{{block class='Faonni\ProductMostViewed\Block\ProductList' 
@@ -38,7 +38,7 @@ A shortcode to Homepage and to other CMS pages or CMS blocks.
 	}}
     ```
     
-A Layout Update XML to all categories.
+2. A Layout Update XML to all categories.
 
     ```xml
 	<referenceBlock name="catalog.product.most.viewed">
