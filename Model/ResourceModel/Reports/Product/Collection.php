@@ -9,18 +9,16 @@ namespace Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product;
 use Magento\Reports\Model\ResourceModel\Product\Collection as ProductCollection;
 
 /**
- * Catalog product most viewed items collection
- *
- * @SuppressWarnings(PHPMD.LongVariable)
+ * Product Most Viewed Collection
  */
 class Collection extends ProductCollection
 {
     /**
-     * Add views count
+     * Add Views Count
      *
      * @param string $from
      * @param string $to
-     * @return $this
+     * @return \Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product\Collection
      */
     public function addViewsCount($from='', $to='')
     {
