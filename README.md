@@ -24,7 +24,9 @@ Extension displays the top most viewed products for your stores.
 	php bin/magento setup:upgrade
 	php bin/magento setup:static-content:deploy
     ```
-          
+
+4. Refresh Statistics
+    
 ## Display and configuration
 
 1. A shortcode to Homepage and to other CMS pages or CMS blocks.
