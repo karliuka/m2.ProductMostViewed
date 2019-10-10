@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- * 
+ *
  * See COPYING.txt for license details.
  */
 namespace Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product;
@@ -20,15 +20,16 @@ class Collection extends ProductCollection
      * @param string $to
      * @return \Faonni\ProductMostViewed\Model\ResourceModel\Reports\Product\Collection
      */
-    public function addViewsCount($from='', $to='')
+    public function addViewsCount($from = '', $to = '')
     {
         /**
          * Getting event type id for catalog_product_view event
          */
         $eventTypes = $this->_eventTypeFactory->create()->getCollection();
+        $productViewEvent = null;
         foreach ($eventTypes as $eventType) {
             if ($eventType->getEventName() == 'catalog_product_view') {
-                $productViewEvent = (int)$eventType->getId();
+                $productViewEvent = (string)$eventType->getId();
                 break;
             }
         }

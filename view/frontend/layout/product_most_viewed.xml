@@ -2,28 +2,26 @@
 <!--
 /**
  * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- * 
+ *
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-	<!--
-	Handle product most viewed
-	-->			
-	<body>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!-- Handle product most viewed -->
+    <body>
         <referenceContainer name="content">
             <block class="Faonni\ProductMostViewed\Block\ProductList" name="catalog.product.most.viewed" template="Faonni_ProductMostViewed::product/list/items.phtml" before="-">
                 <arguments>
                     <argument name="type" xsi:type="string">most-viewed</argument>
                     <argument name="title" xsi:type="string" translate="true">Most Viewed Products</argument>
-					<argument name="num_products" xsi:type="string">6</argument>
-					<!-- last 45 days, if 0 - all lifetime -->
-					<argument name="interval" xsi:type="string">45</argument>          
+                    <argument name="num_products" xsi:type="string">6</argument>
+                    <!-- last 45 days, if 0 - all lifetime -->
+                    <argument name="interval" xsi:type="string">45</argument>
                 </arguments>
                 <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="product.most.viewed.addto" as="addto">
                     <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare" name="product.most.viewed.addto.compare" as="compare" template="Magento_Catalog::product/list/addto/compare.phtml"/>
-                </block>			              
+                </block>
             </block>
         </referenceContainer>
     </body>

@@ -2,25 +2,24 @@
     "name": "faonni/module-product-most-viewed",
     "description": "Extension displays the top most viewed products for your stores.",
     "type": "magento2-module",
-	"version": "2.1.1",
+    "version": "2.1.1",
     "authors": [{
-        "name" : "Karliuka Vitalii",
+        "name": "Karliuka Vitalii",
         "email": "karliuka.vitalii@gmail.com"
-    }],	
-	"license": [
-		"OSL-3.0"
-	],
-	"require": {
-		"php": "~5.6.0|~7.0.0|~7.1.0",
-		"magento/module-reports": "100.1.*|100.2.*"
-	},
-	"autoload": {
-		"files": [ 
-			"registration.php" 
-		],
-		"psr-4": {
-			"Faonni\\ProductMostViewed\\": ""
-		}
-	}
+    }],
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "php": "~5.6.0|~7.0.0|~7.1.0",
+        "magento/module-reports": "100.1.*|100.2.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php" 
+        ],
+        "psr-4": {
+            "Faonni\\ProductMostViewed\\": ""
+        }
+    }
 }
-

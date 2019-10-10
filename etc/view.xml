@@ -2,12 +2,12 @@
 <!--
 /**
  * Copyright © 2011-2018 Karliuka Vitalii(karliuka.vitalii@gmail.com)
- * 
+ *
  * See COPYING.txt for license details.
  */
 -->
-<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Config/etc/view.xsd">
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
     <media>
         <images module="Magento_Catalog">
             <image id="most_viewed_products_list" type="small_image">
@@ -15,7 +15,7 @@
                 <height>140</height>
             </image>
         </images>
-    </media>    
+    </media>
     <vars module="Magento_Catalog">
         <var name="most_viewed_products_list:type">small_image</var>
         <var name="most_viewed_products_list:width">140</var>
